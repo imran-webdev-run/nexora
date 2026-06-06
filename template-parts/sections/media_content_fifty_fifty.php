@@ -4,7 +4,9 @@
     $section_top_sub_heading               = $section_top_content['section_top_sub_heading'];         // ACF Text Field : Section Top Sub Heading
     $section_top_heading                   = $section_top_content['section_top_heading'];             // ACF Text Field : Section Top Heading
 
+    $media_type                            = get_sub_field('media_type');                      // ACF Button Group Field : Media Type image/video
     $image                                 = get_sub_field('image');                           // ACF Image Field : Image
+    $video                                 = get_sub_field('video');                           // ACF Video Field : Video
 
     $content_sub_heading                   = get_sub_field('content_sub_heading');             // ACF Text Field : Content Sub Heading
     $section_heading                       = get_sub_field('section_heading');                 // ACF Text Field : Section Heading
@@ -38,9 +40,22 @@
 
         <div class="media-content-wrapper <?php echo esc_attr($media_position); ?> ">
             <div class="fifty-fifty-media media">
-                <?php if ( $image ) : ?>
-                    <img src="<?php echo esc_url( $image['url'] ) ; ?>" alt="<?php echo esc_attr( $image['alt'] ) ; ?>">
-                <?php endif; ?>
+                <?php if ($media_type === 'image' && !empty($image)){ ?>
+
+                    <div class="fifty-fifty-image media">
+                        <img src="<?php echo $image['url'] ; ?>" alt="">
+                    </div>
+                <?php } elseif ($media_type === 'video' && !empty($video)){ ?>
+
+                    <div class="fifty-fifty-video media">
+                        <video controls autoplay muted playsinline loop>
+                            <source src="<?php echo $video['url'] ; ?>" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                        </video>
+                    </div>
+                <?php } 
+                
+                ?>
             </div>
 
             <div class="fifty-fifty-content content">

@@ -213,10 +213,28 @@ Media Content Fifty Fifty Style Start
 .media-content-fifty-fifty.background {
 	background: #F8FAFC;
 }
-.media-content-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+
+.fifty-fifty-media {
+  grid-area: media;
+}
+.fifty-fifty-content {
+  grid-area: content;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "media content";
 	gap: 80px;
+}
+
+.media-content-wrapper.left {
+  grid-template-columns: 560px 1fr;
+  grid-template-areas: "media content";
+}
+
+.media-content-wrapper.right {
+  grid-template-columns: 1fr 560px;
+  grid-template-areas: "content media";
 }
 /* 
 ===========================================
