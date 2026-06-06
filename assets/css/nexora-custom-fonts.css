@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Beausite Classic Regular";
+    src: url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.eot");
+    src: url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/81db551dd19e720ed0bc40dbde312130.svg#Beausite Classic Regular")format("svg");
+}

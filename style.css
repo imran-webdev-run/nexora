@@ -1,0 +1,225 @@
+/*!
+Theme Name: nexora
+Theme URI: http://underscores.me/
+Author: Imran Hossain
+Author URI: https://www.webdevrun.com/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: nexora
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+nexora is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/* 
+===========================================
+Header Style Start
+===========================================
+*/
+
+.site-header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+	border-bottom: 1px solid #E2E8F0;
+}
+.navigation-menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 32px;
+}
+.navigation-menu ul li a {
+    color: var(--nx-black);
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    padding: 30px 0;
+    display: block;
+}
+.header-right .button {
+	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-left: 18px;
+	padding-right: 18px;
+	border-radius: 8px;
+	text-decoration: none;
+	color: var(--nx-black);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.header-right .button.has-bg-color {
+	color: #FFF;
+    font-weight: 600;
+}
+
+/* 
+===========================================
+Header Style End
+===========================================
+*/
+
+
+
+/* 
+===========================================
+Header Style Start
+===========================================
+*/
+
+.hero-section {
+    background: linear-gradient(90deg, #EEF2FF 0%, #FFF 100%);
+}
+.hero-wrapper .hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 45%;
+	text-align: center;
+	margin: 0 auto;
+}
+.section-sub-heading ul {
+    padding: 0;
+    margin: 0;
+}
+.section-sub-heading ul {
+    padding: 6px 24px;
+    border-radius: 999px;
+    border: 1px solid #D9DEF7;
+    background: #EEF2FF;
+}
+.section-sub-heading ul li {
+    padding-left: 4px;
+    color: var(--ns-blue);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.hero-title {
+	color: var(--nx-black);
+	text-align: center;
+	font-family: Inter;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 105%;
+	letter-spacing: -1.44px;
+	margin-top: 33px;
+	margin-bottom: 0;
+}
+
+.hero-description {
+	color: var(--ns-body-text);
+	text-align: center;
+	font-family: Inter;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 160%;
+	margin-top: 24px;
+}
+.hero-cta-wrapper .btn {
+	padding: 14px 22px;
+	text-decoration: none;
+	border-radius: 10px;
+	border: 1px solid #E2E8F0;
+	background: #FFF;
+	display: inline-block;
+	color: var(--nx-black);
+}
+.hero-cta-wrapper {
+	margin-top: 32px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.hero-cta-wrapper .btn.background {
+	background: var(--ns-blue);
+	color: #fff;
+	border: 1px solid var(--ns-blue);
+}
+.hero-footer-wrapper {
+	color: var(--ns-body-text);
+	text-align: center;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	margin-top: 32px;
+}
+/* 
+===========================================
+Header Style End
+===========================================
+*/
+
+
+/* 
+===========================================
+Working with Teams Style Start
+===========================================
+*/
+.working-with-teams-wrapper {
+	text-align: center;
+}
+.section-sub-heading {
+	color: var(--body-text);
+	text-align: center;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 1.32px;
+}
+.team-items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 64px;
+	margin-top: 24px;
+}
+/* 
+===========================================
+Working with Teams Style End
+===========================================
+*/
+
+
+/* 
+===========================================
+Media Content Fifty Fifty Style Start
+===========================================
+*/
+.media-content-fifty-fifty.background {
+	background: #F8FAFC;
+}
+.media-content-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 80px;
+}
+/* 
+===========================================
+Media Content Fifty Fifty Style End
+===========================================
+*/
