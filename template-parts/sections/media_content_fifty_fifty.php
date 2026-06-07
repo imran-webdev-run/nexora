@@ -24,10 +24,10 @@
 ?>
 
 <section class="media-content-fifty-fifty layout-padding <?php echo esc_attr($section_background); ?>">
-    <div class="media-content-fifty-fifty-wrapper pt-lg-100 pt-50 pb-lg-100 pb-50 ">
+    <div class="media-content-fifty-fifty-wrapper pt-50 pb-50">
 
         <?php if ( $show_section_top ) : ?>
-            <div class="section-top">
+            <div class="section-top pb-lg-100 pb-50">
                 <?php if ( $section_top_sub_heading ) : ?>
                     <p class="section-sub-heading" ><?php echo esc_html($section_top_sub_heading); ?> </p>
                 <?php endif; ?>
@@ -39,7 +39,7 @@
         <?php endif; ?>
 
         <div class="media-content-wrapper <?php echo esc_attr($media_position); ?> ">
-            <div class="fifty-fifty-media media">
+            <div class="fifty-fifty-media">
                 <?php if ($media_type === 'image' && !empty($image)){ ?>
 
                     <div class="fifty-fifty-image media">
