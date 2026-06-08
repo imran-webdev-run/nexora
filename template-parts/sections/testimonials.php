@@ -116,29 +116,30 @@
 
                         </div>
 
-                        <div class="video-popup">
-
-                            <div class="video-overlay"></div>
-
-                            <div class="video-content">
-
-                                <button type="button" class="video-close">
-                                    &times;
-                                </button>
-
-                                <video controls autoplay muted playsinline>
-                                    <source
-                                        src="<?php echo $testimonial_video['url']; ?>"
-                                        type="video/mp4"
-                                    >
-                                </video>
-
-                            </div>
-
-                        </div>
+                        
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
+        </div>
+        <div class="video-popup">
+
+            <div class="video-overlay"></div>
+
+            <div class="video-content">
+
+                <button type="button" class="video-close">
+                    &times;
+                </button>
+
+                <video controls autoplay muted playsinline>
+                    <source
+                        src="<?php echo $testimonial_video['url']; ?>"
+                        type="video/mp4"
+                    >
+                </video>
+
+            </div>
+
         </div>
     </div>
 </section>

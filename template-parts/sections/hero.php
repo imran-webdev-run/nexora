@@ -5,8 +5,7 @@
 
     $show_cta                   = get_sub_field('show_cta');                // ACF True/False Field : Show CTA Button  
     $hero_cta_button            = get_sub_field('hero_cta_button');         // ACF Repeater Field : Hero CTA Button
-    // $hero_button                = $hero_cta_button['hero_button'];
-    // $button_style               = $hero_cta_button['button_style'];
+
 
     $hero_footer                  = get_sub_field('hero_footer');           // ACF Text Field : Hero Footer Text
 ?>
