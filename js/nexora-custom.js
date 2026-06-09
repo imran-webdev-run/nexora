@@ -9,6 +9,23 @@ jQuery(document).ready(function ($) {
     });
 
 
+    $('.post-card-boxes-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 3000,
+    });
+
+    $('.servic-card-boxes-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        autoplaySpeed: 3000,
+    });
+
+
 
     $(".faq-item").on("click", function () {
 

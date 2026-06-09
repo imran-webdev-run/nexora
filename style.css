@@ -32,6 +32,10 @@ Header Style Start
 	grid-template-columns: auto 1fr auto;
 	align-items: center;
 	border-bottom: 1px solid #E2E8F0;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background: #fff;
 }
 .navigation-menu ul {
     display: flex;
@@ -934,5 +938,199 @@ Pricing Section Style Start
 /* 
 ===========================================
 Pricing Section Style End
+===========================================
+*/
+/* 
+===========================================
+Post Card Section Style Start
+===========================================
+*/
+
+.post-card-grid-section {
+	background: #F8FAFC;
+}
+.article-section-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 55px;
+}
+.article-section-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.article-section-top-title {
+	color: #0F172A;
+	font-size: 38px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 115%;
+	letter-spacing: -0.38px;
+	margin-top: 12px;
+	margin-bottom: 0;
+}
+.article-section-sub-heading {
+	color: #4338CA;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 1.32px;
+}
+.show-all-article-link a {
+	display: flex;
+	padding: 12px 22px;
+	align-items: flex-start;
+	border-radius: 10px;
+	border: 1px solid #E2E8F0;
+	background: #FFF;
+	color: #1E293B;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-decoration: none;
+}
+.show-all-article-link:hover a {
+	background: #6365f10b;
+	color: var(--ns-blue);
+}
+.post-card-boxes.card-grid {
+	gap: 24px;
+}
+.post-card-box {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 16px;
+	border: 1px solid #E2E8F0;
+	background: #FFF;
+	overflow: hidden;
+}
+.post-card-boxes-carousel .post-card-box,
+.servic-card-boxes-carousel .secvice-section-box
+{
+	margin-right: 24px;
+}
+.post-info {
+	display: flex;
+	padding: 24px 28px 28px 28px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+	align-self: stretch;
+}
+.category span {
+	padding: 4px 8px;
+	border-radius: 4px;
+	background: #EEF2FF;
+	color: #4338CA;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 0.8px;
+}
+.category {
+	display: flex;
+	gap: 8px;
+}
+.post-info h3 {
+	color: #0F172A;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 130%;
+	letter-spacing: -0.06px;
+}
+.box-footer {
+	display: flex;
+	gap: 16px;
+}
+.post-date, .read-time {
+	color: #64748B;
+	font-family: Inter;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+/* 
+===========================================
+Post Card Section Style End
+===========================================
+*/
+
+/* 
+===========================================
+Service Card Section Style Start
+===========================================
+*/
+
+.secvice-section {
+  background: #F8FAFC;
+}
+.secvice-section-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 55px;
+}
+.secvice-section-box {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0 0;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  background: #FFF;
+}
+.secvice-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.secvice-icon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: #EEF2FF;
+}
+.service-title h3 {
+  color: #0F172A;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.11px;
+  margin-bottom: 0;
+}
+.service-excerpt p {
+  color: #64748B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.service-link a {
+  color: #6366F1;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* 
+===========================================
+Service Card Section Style End
 ===========================================
 */

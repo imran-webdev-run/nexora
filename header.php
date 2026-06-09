@@ -24,6 +24,7 @@
 	<header id="masthead" class="site-header layout-padding">
 		<div class="header-left">
 			<div class="site-branding">
+				<a href="<?php echo esc_url(home_url('/')); ?>">
 				<?php
 					if ( $site_logo ) :
 
@@ -42,6 +43,7 @@
 
 					endif;
 				?>
+				</a>
 			</div><!-- .site-branding -->
 		</div>
 
