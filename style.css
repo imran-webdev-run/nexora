@@ -74,6 +74,9 @@ Header Style Start
 	color: #FFF;
     font-weight: 600;
 }
+.admin-bar .site-header {
+	top: 32px;
+}
 
 /* 
 ===========================================
@@ -1132,5 +1135,179 @@ Service Card Section Style Start
 /* 
 ===========================================
 Service Card Section Style End
+===========================================
+*/
+
+/* 
+===========================================
+Post Archive Style Start
+===========================================
+*/
+.post-archive-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+
+.archive-banner.media {
+	max-height: 500px;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.archive-banner.media::after {
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0d0d0d;
+	z-index: 10;
+	max-height: 500px;
+	position: absolute;
+	opacity: .5;
+}
+.entry-title {
+	font-size: 32px;
+	line-height: 120%;
+	margin-bottom: 0;
+	margin-top: 16px;
+	height: 70px;
+}
+.entry-title a {
+  text-decoration: none;
+}
+article .category {
+  margin-top: 10px;
+}
+.entry-content {
+  margin-top: 16px;
+  color: #8e9bb3;
+}
+article .box-footer {
+	margin-top: 16px;
+}
+.category-filter {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 12px;
+}
+.category-filter a {
+  padding: 12px 24px;
+  background: #f1f7ff;
+  text-decoration: none;
+  color: #284770;
+  border-radius: 8px;
+}
+
+.service-archive-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.page-header {
+  background: #EEF2FF;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  color: var(--nx-black);
+}
+
+.breadcrumb a {
+  color: #fff;
+}
+/* 
+===========================================
+Post Archive Style End
+===========================================
+*/
+
+/* 
+===========================================
+Footer Section Style Start
+===========================================
+*/
+
+.site-footer {
+	background: #0F172A;
+}
+.industry-insight {
+	color: #fff;
+}
+.site-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.industry-insight p {
+  color: #8C99B2;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  margin-top: 20px;
+}
+.newsletter {
+	margin-top: 20px;
+}
+.newsletter .field-row {
+  justify-content: space-between;
+  display: flex;
+  width: 380px;
+  padding: 4px;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.newsletter input {
+  background: none;
+  border: none;
+  color: #8C99B2;
+}
+.newsletter form .field-row {
+	display: flex;
+	align-items: center;
+	border: 1px solid #FFFFFF1F;
+	border-radius: 10px;
+	padding: 4px;
+	justify-content: space-between;
+	width: 100%;
+}
+.newsletter form .field-row .field-full {
+  margin-left: 16px;
+}
+.newsletter form .field.submit-field p {
+  display: flex;
+  border-radius: 8px;
+  background: #6366F1;
+  color: #fff;
+}
+.newsletter form .field-row .submit-field span {
+  display: none;
+}
+.newsletter form .field.submit-field p input {
+  color: #fff;
+}
+.newsletter form .field-row .submit-field {
+  margin-left: 0;
+  display: flex;
+  justify-content: end;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+	border: none;
+	color: #9e7878;
+	border-radius: 6px;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+	border: none;
+	color: #46b450;
+}
+/* 
+===========================================
+Footer Section Style End
 ===========================================
 */

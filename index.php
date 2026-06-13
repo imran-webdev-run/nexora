@@ -15,7 +15,29 @@
 get_header();
 ?>
 
+
 	<main id="primary" class="site-main">
+		<div class="archive-banner media">
+			<img src="http://localhost/PracticeProjects/wordpress/nexora/wp-content/uploads/2026/06/why-archive-files-are-the-1-choice-for-cyberattacks-03.jpeg" alt="">
+			
+		</div>
+		<?php custom_breadcrumb(); ?>
+
+		
+
+	<div class="article layout-padding pt-lg-100 pt-50">
+
+		<div class="category-filter">
+			<?php
+				$categories = get_categories();
+
+				foreach ( $categories as $category ) :
+				?>
+					<a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>">
+						<?php echo esc_html( $category->name ); ?>
+					</a>
+				<?php endforeach; ?>
+		</div>
 
 		<?php
 		if ( have_posts() ) :
@@ -26,8 +48,11 @@ get_header();
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 				<?php
-			endif;
+			endif; ?>
 
+
+			<div class="post-archive-wrapper">
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -39,9 +64,15 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
-			endwhile;
+			endwhile; ?>
+			</div>
 
-			the_posts_navigation();
+			<?php 
+			the_posts_pagination( array(
+				'mid_size'  => 1,
+				'prev_text' => '←',
+				'next_text' => '→',
+			) );
 
 		else :
 
@@ -50,6 +81,7 @@ get_header();
 		endif;
 		?>
 
+	</div>
 	</main><!-- #main -->
 
 <?php

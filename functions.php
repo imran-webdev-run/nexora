@@ -191,3 +191,53 @@ function new_standard_acf_option_pages() {
 }
 
 add_action('acf/init', 'new_standard_acf_option_pages');
+
+
+// custom_breadcrumb
+function custom_breadcrumb() {
+
+    echo '<div class="breadcrumb">';
+
+    echo '<a href="' . esc_url( home_url() ) . '">Home</a>';
+
+    if ( is_page() ) {
+
+        global $post;
+
+        $parents = array_reverse( get_post_ancestors( $post->ID ) );
+
+        foreach ( $parents as $parent ) {
+            echo ' / <a href="' . get_permalink( $parent ) . '">' . get_the_title( $parent ) . '</a>';
+        }
+
+        echo ' / <span>' . get_the_title() . '</span>';
+
+    } elseif ( is_single() ) {
+
+        $categories = get_the_category();
+
+        if ( ! empty( $categories ) ) {
+            echo ' / <a href="' . get_category_link( $categories[0]->term_id ) . '">' . $categories[0]->name . '</a>';
+        }
+
+        echo ' / <span>' . get_the_title() . '</span>';
+
+    } elseif ( is_post_type_archive() ) {
+
+        echo ' / <span>' . post_type_archive_title( '', false ) . '</span>';
+
+    } elseif ( is_category() ) {
+
+        echo ' / <span>' . single_cat_title( '', false ) . '</span>';
+
+    } elseif ( is_tax() ) {
+
+        echo ' / <span>' . single_term_title( '', false ) . '</span>';
+
+    } elseif ( is_archive() ) {
+
+        echo ' / <span>' . get_the_archive_title() . '</span>';
+    }
+
+    echo '</div>';
+}

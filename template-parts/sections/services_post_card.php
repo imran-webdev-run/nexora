@@ -55,7 +55,9 @@
                 <?php if ( $latest_services->have_posts()) : ?>
                 <?php while ( $latest_services->have_posts()) : $latest_services->the_post(); ?>
 
-                    <div class="secvice-section-box">
+                <?php get_template_part('inc/service' , 'page') ?>
+
+                    <!-- <div class="secvice-section-box">
                         <div class="secvice-top">
                             <div class="secvice-icon">
                                 <?php
@@ -126,7 +128,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
 
             <?php endwhile; endif; endif; ?>
             <?php wp_reset_postdata(); ?>

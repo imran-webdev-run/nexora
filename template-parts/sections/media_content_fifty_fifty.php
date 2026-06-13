@@ -92,6 +92,8 @@
                                 </div>
                             <?php endforeach; ?>
                         </div>
+
+                    <?php if ($section_highlight_items) : ?>
                     <?php elseif ( $section_highlight_items == 'list') : ?>
                         <ul class="list-items">
                             <?php foreach ( $list_item as $item ) :  
@@ -106,7 +108,7 @@
                                 </li>
                             <?php endforeach; ?>
                         </ul>
-                    <?php endif; ?>
+                    <?php endif; endif; ?>
                 </div>
             </div>
 

@@ -43,44 +43,46 @@
 
             <?php 
                 $latest_posts    = new WP_Query(array(
-                    'post_type'         => $post,
+                    'post_type'         => 'post',
                     'posts_per_page'    => $posts_per_page,
                 ));
             ?>
 
             <?php if ($latest_posts->have_posts() ) : ?>
                 <?php while ( $latest_posts->have_posts() ) : $latest_posts->the_post(); ?>
-                <div class="post-card-box">
-                    <div class="post-thumb">
-                        <div class="thumbnail media">
-                        <?php the_post_thumbnail(); ?>
-                        </div>
-                    </div>
-
-                    <div class="post-info">
-                        <div class="category">
-                            <?php $categories   = get_the_category();
-                                if ( !empty($categories)) :
-                                    foreach ( $categories as $category ) :
-                            ?>
-                            <span>
-                                <?php echo esc_html( $category->name ); ?>
-                            </span>
-                            <?php endforeach; endif; ?>
+                <a href="<?php the_permalink();  ?>">
+                    <div class="post-card-box">
+                        <div class="post-thumb">
+                            <div class="thumbnail media">
+                            <?php the_post_thumbnail(); ?>
+                            </div>
                         </div>
 
-                        <h3><?php the_title(); ?></h3>
-                        
-                        <div class="box-footer">
-                            <span class="post-date">
-                                <?php echo get_the_date( 'M j, Y' ); ?>
-                            </span>
-                            <div class="read-time">
-                                <?php echo ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ) . ' min read'; ?>
+                        <div class="post-info">
+                            <div class="category">
+                                <?php $categories   = get_the_category();
+                                    if ( !empty($categories)) :
+                                        foreach ( $categories as $category ) :
+                                ?>
+                                <span>
+                                    <?php echo esc_html( $category->name ); ?>
+                                </span>
+                                <?php endforeach; endif; ?>
+                            </div>
+
+                            <h3><?php the_title(); ?></h3>
+                            
+                            <div class="box-footer">
+                                <span class="post-date">
+                                    <?php echo get_the_date( 'M j, Y' ); ?>
+                                </span>
+                                <div class="read-time">
+                                    <?php echo ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ) . ' min read'; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
             <?php endwhile; endif; ?>
 
@@ -97,38 +99,42 @@
                     foreach ( $manual_post as $post ) : 
                         setup_postdata( $post ) ;
                 ?>
-
-                <div class="post-card-box">
-                    <div class="post-thumb">
-                        <div class="thumbnail media">
-                        <?php the_post_thumbnail(); ?>
-                        </div>
-                    </div>
-
-                    <div class="post-info">
-                        <div class="category">
-                            <?php $categories   = get_the_category();
-                                if ( !empty($categories)) :
-                                    foreach ( $categories as $category ) :
-                            ?>
-                            <span>
-                                <?php echo esc_html( $category->name ); ?>
-                            </span>
-                            <?php endforeach; endif; ?>
-                        </div>
-
-                        <h3><?php the_title(); ?></h3>
-                        
-                        <div class="box-footer">
-                            <span class="post-date">
-                                <?php echo get_the_date( 'M j, Y' ); ?>
-                            </span>
-                            <div class="read-time">
-                                <?php echo ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ) . ' min read'; ?>
+                
+                <a href="<?php the_permalink();  ?>">
+                    <div class="post-card-box">
+                        <div class="post-thumb">
+                            <div class="thumbnail media">
+                            <?php the_post_thumbnail(); ?>
                             </div>
                         </div>
+
+                        <div class="post-info">
+                            <div class="category">
+                                <?php $categories   = get_the_category();
+                                    if ( !empty($categories)) :
+                                        foreach ( $categories as $category ) :
+                                ?>
+                                <span>
+                                    <?php echo esc_html( $category->name ); ?>
+                                </span>
+                                <?php endforeach; endif; ?>
+                            </div>
+
+                            <h3><?php the_title(); ?></h3>
+                            
+                            <div class="box-footer">
+                                <span class="post-date">
+                                    <?php echo get_the_date( 'M j, Y' ); ?>
+                                </span>
+                                <div class="read-time">
+                                    <?php echo ceil( str_word_count( wp_strip_all_tags( get_the_content() ) ) / 200 ) . ' min read'; ?>
+                                </div>
+                            </div>
+
+                            
+                        </div>
                     </div>
-                </div>
+                </a>
 
             <?php endforeach; endif; ?>
 
